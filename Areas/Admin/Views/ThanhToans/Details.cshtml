@@ -1,0 +1,27 @@
+﻿@model TMDT.Models.ThanhToan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ThanhToan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhthucTT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhthucTT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdTT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

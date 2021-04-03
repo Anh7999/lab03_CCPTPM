@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-page-banner home-3">
+    <div class="container">
+        <div class="row">
+            <!-- Vertical Menu Start Here -->
+            @{ Html.RenderAction("Shopbycategory", "Default");}
+            <!-- Vertical Menu End Here -->
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Categorie Menu & Slider Area End Here -->
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area mt-30">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul class="d-flex align-items-center">
+                <li><a href="@Url.Action("Index","Default")">Trang chủ</a></li>
+                <li class="active"><a href="@Url.Action("About","Default")">Giới Thiệu</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+<!-- About Us Start Here -->
+<div class="about-us pt-100 pt-sm-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="sidebar-img mb-all-30">
+                    <img src="~/Content/img/blog/10.jpg" alt="single-blog-img">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-desc">
+                    <h3 class="mb-10 about-title">Về câu chuyện thành công của chúng tôi</h3>
+                    <p class="mb-20">Cũng không có bất kỳ người nào thuộc về và nỗi thống khổ đau buồn của riêng họ, mà anh ta mong muốn có được, nhưng trong lao động và đau đớn vì họ không có một số điều vĩ đại không bao giờ có thể gắn bó để tìm kiếm các phương thức của thời điểm sa ngã đã từng thực hiện các bài tập thể dục nặng nhọc, ngoại trừ để đạt được một số lợi ích từ nó?</p>
+                    <p class="mb-20">Nhưng ai có quyền tìm lỗi với mình, những người đang ở trong đó, một niềm vui mà không có hậu quả khó chịu, hoặc một người tránh một nỗi đau rằng đó là một niềm vui.</p>
+                    <p> Và hiện tại, malesuada vestibulum eu nisi của tôi. Thuyền lâu năm nay được khấu trừ nhân viên. Tốt nghiệp đại lý du lịch lớn nhất, nhưng thành viên của cà rốt dinh dưỡng, nước sốt nó ngay bây giờ. Cho đến khi cần rất nhiều bóng đá. Trình bày ấm áp.</p>
+                    @*<a href="#" class="return-customer-btn read-more">read more</a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- About Us End Here -->
+<!-- About Us Team Start Here -->
+<div class="about-team pt-100 pt-sm-60">
+    <div class="container">
+        <h3 class="mb-30 about-title">Nhóm Của Chúng Tôi</h3>
+        <div class="row text-center">
+            <!-- Single Team Start Here -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="single-team mb-all-30">
+                    <div class="team-img sidebar-img">
+                        <img src="~/Content/img/team/1.jpg" alt="team-image">
+                        <div class="team-link">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Nguyễn Trung Anh</h4>
+                        <p>web designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team End Here -->
+            <!-- Single Team Start Here -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="single-team mb-all-30">
+                    <div class="team-img sidebar-img">
+                        <img src="~/Content/img/team/2.jpg" alt="team-image">
+                        <div class="team-link">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Lê Đồng Phương</h4>
+                        <p>web designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team End Here -->
+            <!-- Single Team Start Here -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="single-team mb-xxs-30">
+                    <div class="team-img sidebar-img">
+                        <img src="~/Content/img/team/3.jpg" alt="team-image">
+                        <div class="team-link">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Lê Nhân</h4>
+                        <p>web designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team End Here -->
+            <!-- Single Team Start Here -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="single-team">
+                    <div class="team-img sidebar-img">
+                        <img src="~/Content/img/team/4.jpg" alt="team-image">
+                        <div class="team-link">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Châu Văn Hưng</h4>
+                        <p>web designer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="single-team mb-all-30">
+                    <div class="team-img sidebar-img">
+                        <img src="~/Content/img/team/5.jpg" alt="team-image">
+                        <div class="team-link">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Lê Văn Minh</h4>
+                        <p>web designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team End Here -->
+            <!-- Single Team Start Here -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="single-team mb-all-30">
+                    <div class="team-img sidebar-img">
+                        <img src="~/Content/img/team/6.jpg" alt="team-image">
+                        <div class="team-link">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Cao Hữu Duy</h4>
+                        <p>web developer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team End Here -->
+            <!-- Single Team Start Here -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="single-team mb-xxs-30">
+                    <div class="team-img sidebar-img">
+                        <img src="~/Content/img/team/3.jpg" alt="team-image">
+                        <div class="team-link">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Phạm Nguyễn Quang Huy</h4>
+                        <p>web designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team End Here -->
+            <!-- Single Team Start Here -->
+          
+            <!-- Single Team End Here -->
+            <!-- Single Team End Here -->
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- About Us Team End Here -->
+<!-- About Us Skills Start Here -->
+
+<!-- Support Area End Here -->

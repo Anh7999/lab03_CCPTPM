@@ -1,0 +1,56 @@
+﻿@model IEnumerable<TMDT.Models.Gia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<style>
+    th, td {
+        text-align: center;
+    }
+
+        td p {
+            height: 50px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+        }
+</style>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dongia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngayapdung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngayketthuc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dongia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngayapdung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngayketthuc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdMucgia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdMucgia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdMucgia })
+        </td>
+    </tr>
+}
+
+</table>
