@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TMDT.Models.DonHangVanChuyen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Quản lý đơn hàng vận chuyển</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Ngày giao
+        </th>
+        <th>
+            Ngày nhận
+        </th>
+        <th>
+            Tình trạng đơn hàng
+        </th>
+        <th>
+            Phương thức vận chuyển
+        </th>
+        <th>
+            Phí vận chuyển
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayGiaoHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayNhanHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhtrangDH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhuongthucVC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhiVC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShippingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShippingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShippingID })
+        </td>
+    </tr>
+}
+
+</table>

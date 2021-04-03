@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="wrapper">
+    <div class="main-page-banner pb-50 off-white-bg">
+        <div class="container">
+            <div class="row">
+                @{ Html.RenderAction("Shopbycategory", "Default");}
+
+                <div class="col-xl-9 col-lg-8 slider_box">
+                    <div class="slider-wrapper theme-default">
+                        <!-- Slider Background  Image Start-->
+                        <div id="slider" class="nivoSlider">
+                            <a href="@Url.Action("Shop","Default")"><img src="~/Content/img/slider/1.jpg" data-thumb="~/Content/img/slider/1.jpg" alt="" title="#htmlcaption"></a>
+                            <a href="@Url.Action("Shop","Default")"><img src="~/Content/img/slider/2.jpg" data-thumb="~/Content/img/slider/2.jpg" alt="" title="#htmlcaption2"></a>
+                        </div>
+                        <!-- Slider Background  Image Start-->
+                    </div>
+                </div>
+                <!-- Slider Area End Here -->
+            </div>
+            <!-- Row End -->
+        </div>
+        <!-- Container End -->
+    </div>
+    <!-- Categorie Menu & Slider Area End Here -->
+    <!-- Brand Banner Area Start Here -->
+    <div class="image-banner pb-50 off-white-bg">
+        <div class="container">
+            <div class="col-img">
+                <a href="#"><img src="~/Content/img/banner/h1-banner.jpg" alt="image banner"></a>
+            </div>
+        </div>
+        <!-- Container End -->
+    </div>
+    @{ Html.RenderAction("SpMoi", "Default");}
+    @{ Html.RenderAction("getSanPham", "Default");}
+
+
+
+</div>

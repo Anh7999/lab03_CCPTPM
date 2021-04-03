@@ -1,0 +1,105 @@
+﻿@using TMDT.Models
+@model List<Giohang>
+@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="cart-main-area ptb-100 ptb-sm-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!-- Form Start -->
+                <form action="#">
+                    <!-- Table Content Start -->
+                    <div class="table-content table-responsive mb-45">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product-thumbnail">Hình</th>
+                                    <th class="product-name">Sản Phẩm</th>
+                                    <th class="product-price">Giá</th>
+                                    <th class="product-quantity">Số Lượng</th>
+                                    <th class="product-subtotal">Tổng Tiền</th>
+                                    <th class="product-remove">Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        @using (Html.BeginForm("CapnhatGiohang", "Giohang", new { @iMaSp = item.idsp }))
+                                        {
+                                            <td class="product-thumbnail">
+                                                <a href="#"><img src="~/Content/anh/@item.anh" alt="cart-image"></a>
+                                            </td>
+                                            <td class="product-name"><a href="#">@item.tensp</a></td>
+
+                                            <td class="product-price"><span class="amount">@String.Format("{0:0,0}", item.dongia)</span></td>
+                                            <td class="product-quantity">@item.soluong</td>
+                                            <td class="product-subtotal">@String.Format("{0:0,0}", item.thanhtien)</td>
+                                            <td class="product-remove">  @Html.ActionLink("X", "XoaGiohang", new { @iMaSp = item.idsp })</td>
+
+
+                                        }
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                        <h2 style="text-align:center">THÔNG TIN ĐẶT HÀNG</h2>
+                        @{
+                            Account kh = (Account)Session["Taikhoan"];
+                        }
+                        <table>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.ValidationSummary(true)
+                                <tr style="height:40px">
+                                    <td> Họ tên khách hàng:</td>
+                                    <td style="font-weight:bold">  @kh.TenKH </td>
+                                </tr>
+                                <tr style="height:40px">
+                                    <td> Địa chỉ:</td>
+                                    <td style="font-weight:bold">  @kh.DiachiKH </td>
+                                </tr>
+                                <tr style="height:40px">
+                                    <td> Địện thoại:</td>
+                                    <td style="font-weight:bold">  @kh.Sdt </td>
+                                </tr>
+
+                                <tr style="height:40px">
+                                    <td> Ngày đặt:</td>
+                                    <td style="font-weight:bold"> @DateTime.Now.ToShortDateString() </td>
+                                </tr>
+                                <tr style="height:80px">
+                                    <td> Ngày giao hàng:</td>
+                                    <td>
+                                        <input style="width:160px" type="date" name="Ngaygiao" />
+                                    </td>
+                                </tr>
+
+                                <tr style="height:40px ">
+                                    <td></td>
+                                    <td>
+                                        <input style="width:160px" type="Submit" value="ĐỒNG Ý ĐẶT HÀNG" />
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+                    <div class="wc-proceed-to-checkout">
+                        @Html.ActionLink(" Thanh Toán PayPal", "PaymentWithPaypal", "PaypalController")
+                    </div>
+                    <!-- Table Content Start -->
+                    <!-- Row End -->
+                </form>
+                <!-- Form End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+</div>
+

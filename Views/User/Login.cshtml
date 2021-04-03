@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-page-banner home-3">
+    <div class="container">
+        <div class="row">
+            <!-- Vertical Menu Start Here -->
+            @{ Html.RenderAction("Shopbycategory", "Default");}
+            <!-- Vertical Menu End Here -->
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Categorie Menu & Slider Area End Here -->
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area mt-30">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul class="d-flex align-items-center">
+                <li>@Html.ActionLink("Trang chủ", "Index", "Default")</li>
+                <li>@Html.ActionLink("Tài khoản", "Login", "User")</li>
+                <li class="active">@Html.ActionLink("Liên Hệ Chúng Tôi", "Conntact", "Default")</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+<!-- LogIn Page Start -->
+<div class="log-in ptb-100 ptb-sm-60">
+    <div class="container">
+        <div class="row">
+            <!-- New Customer Start -->
+          
+            <div class="col-md-6">
+                <div class="well mb-sm-30">
+                    <div class="new-customer">
+                        <h3 class="custom-title">Khách Hàng Mới</h3>
+                        <p class="mtb-10"><strong>Đăng ký</strong></p>
+                        <p>Bằng cách tạo tài khoản, bạn sẽ có thể mua sắm nhanh hơn, cập nhật trạng thái đơn hàng và theo dõi các đơn hàng bạn đã thực hiện trước đó</p>
+                        <a class="customer-btn" href="@Url.Action("Register","User")">tiếp tục</a>
+                    </div>
+                </div>
+            </div>
+            <!-- New Customer End -->
+            <!-- Returning Customer Start -->
+          
+            <div class="col-md-6">
+                <div class="well">
+                    <div class="return-customer">
+                        <h3 class="mb-10 custom-title">Đăng Nhập</h3>
+                        <h4 style="color:red; text-align:center"> @ViewBag.Thongbao</h4>
+                        @using (Html.BeginForm())
+                        {
+                            <form action="#">
+                                <div class="form-group">
+                                    <label>Tên Tài Khoản</label>
+
+                                    <input type="text" name="TenDN" placeholder="Email của bạn..." id="TenDN" class="form-control">
+                                    @ViewData["Loi1"]
+                                </div>
+                                <div class="form-group">
+                                    <label>Mật Khẩu</label>
+                                    <input type="text" name="Matkhau" placeholder="Nhập mật khẩu" id="Matkhau" class="form-control">
+                                    @ViewData["Loi2"]
+                                </div>
+                                <p class="lost-password"><a href="@Url.Action("ForgotPass","User")">Quên mật khẩu?</a></p>
+                                <input type="submit" value="Đăng nhập" class="return-customer-btn">
+                            </form>
+                            }
+                        </div>
+                </div>
+            </div>
+            <!-- Returning Customer End -->
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- Container End -->
+</div>
+
+
